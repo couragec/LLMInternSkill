@@ -1,0 +1,13 @@
+references/*
+!references/README.md
+
+# Local-only planning / agent / launch notes. Keep these for development, but
+# do not publish them in the open-source package.
+temp/
+
+# Keep locally downloaded CJK font bundles out of the repository. The template
+# source is tracked, but large / copyright-sensitive fonts should be supplied
+# by the user or installed in the local TeX environment.
+templates/resume-latex/bill-ryan-elegant-zh_CN/fonts/zh_CN-Adobe/
+templates/resume-latex/bill-ryan-elegant-zh_CN/fonts/NotoSansSC/
+templates/resume-latex/bill-ryan-elegant-zh_CN/fonts/NotoSerifCJKsc/

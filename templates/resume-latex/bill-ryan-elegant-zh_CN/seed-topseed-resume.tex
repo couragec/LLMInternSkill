@@ -1,0 +1,73 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% Synthetic demo resume. This is not a real person.
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external}
+\usepackage{linespacing_fix}
+\usepackage{cite}
+\titlespacing*{\section}{0cm}{*1.15}{*0.9}
+\titlespacing*{\subsection}{0cm}{*1.05}{*0.25}
+\setlist[itemize]{topsep=0.12em, leftmargin=1.35pc, itemsep=0pt, parsep=0pt}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\name{李明轩（模拟候选人）}
+
+\basicInfo{
+  \email{demo@example.com} \textperiodcentered\
+  \phone{(+86) 188-0000-0000} \textperiodcentered\
+  \github[synthetic-demo]{https://example.com/synthetic-demo}}
+\small
+
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{某某大学}, 人工智能 / 计算机科学}{2025 -- 2028}
+\textit{硕士在读（模拟）}\ 方向：LLM Search、RAG Evaluation、Agent Verifier、Post-training
+\datedsubsection{\textbf{某某大学}, 软件工程}{2021 -- 2025}
+\textit{本科（模拟）}\ 核心课程：数据结构、机器学习、信息检索、自然语言处理
+
+\section{\faBook\ 论文与科研}
+\datedline{\textbf{SearchBench-Lite: Execution-Grounded Evaluation for LLM Search}（模拟技术报告）}{2026}
+\begin{itemize}[parsep=0.2ex]
+  \item 构建小规模 query-doc 评测样例，围绕相关性、权威性、时效性和引用可验证性设计标注口径；对比 BM25、embedding retrieval 与 rerank 的 NDCG@10 / MRR / Recall@K。
+\end{itemize}
+
+\datedline{\textbf{Agent Verifier Notes for Long-Horizon Tool Use}（模拟在研笔记）}{2026}
+\begin{itemize}[parsep=0.2ex]
+  \item 整理 tool-call trajectory、task completion、citation correctness 与 process reward 的证据边界，区分 Agent demo 与 Agentic RL 训练闭环。
+\end{itemize}
+
+\section{\faBriefcase\ 实习经历}
+\datedsubsection{\textbf{某 AI 研究实验室}, Research Intern（模拟经历）}{2026.03 -- 2026.06}
+\role{LLM Search Evaluation, RAG, Agent Trace}{非真实单位 / 示例用途}
+\begin{itemize}[parsep=0.2ex]
+  \item 参与 LLM 搜索相关性评估流程设计，将长尾 query、DOC 质量、答案引用和失败原因整理为结构化样例；为 RAG / Agent demo 补充 trace 记录、规则 verifier 与人工复核字段。
+\end{itemize}
+
+\section{\faFlask\ 项目经历}
+
+\datedsubsection{\textbf{搜索相关性离线评估与 Rerank Baseline}}{2026.05 -- 2026.06}
+\role{Python, BM25, Embedding Retrieval, Cross-Encoder Rerank}{个人项目 / 模拟 Seed 示例}
+\begin{itemize}[parsep=0.2ex]
+  \item 整理 30 组 query-doc 样例和 12 类长尾查询 bad case，复现 BM25 / embedding baseline，补充 Recall@10、NDCG@10 和 MRR 评估脚本，沉淀可解释失败样例表。
+\end{itemize}
+
+\datedsubsection{\textbf{小参数 LLM 后训练与 Agent Verifier 学习实验}}{2026.04 -- 2026.05}
+\role{LoRA, SFT, Agent Trace, Verifier}{个人学习 / 可选前沿方向}
+\begin{itemize}[parsep=0.2ex]
+  \item 复现小规模 LoRA/SFT 后训练流程，记录训练配置、loss 日志和 20 组生成样例；构造 20 条 Agent 长链路任务，保存 tool-call trace 并设计规则 verifier。
+\end{itemize}
+
+\section{\faCogs\ 技术能力}
+\begin{itemize}[parsep=0.2ex]
+  \item 编程与算法：Python，C++，数据结构与基础算法，离线评估脚本与实验记录。
+  \item LLM / Search：RAG、BM25、embedding retrieval、rerank、query-doc 标注、NDCG / MRR / Recall@K、Agent trace、verifier / reward 设计边界。
+\end{itemize}
+
+\section{\faHeartO\ 竞赛与补充}
+\begin{itemize}[parsep=0.2ex]
+  \item 算法训练：完成约 200 道数据结构与算法题；维护可复现实验 README、运行命令、样例输入输出和面试问答卡片。
+\end{itemize}
+
+\end{document}
