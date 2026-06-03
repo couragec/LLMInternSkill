@@ -1,0 +1,3 @@
+*.md linguist-detectable
+templates/resume-latex/** linguist-vendored
+examples/seed-resume-latex/** linguist-vendored

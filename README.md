@@ -1,10 +1,12 @@
 <div align="center">
 
-# LLMInternSkill
+# LLMInternSkill / LLM Intern Skill
 
-**大模型实习求职工具箱：简历润色、JD 定制、项目包装、面试拷打、开源项目补强。**
+**大模型实习简历与求职工具箱：LLM internship resume polish, JD tailoring, RAG / Agent / Post-training 项目包装、面试拷打、开源项目补强。**
 
-<sub>不只是把简历写好听，而是让每一行都能扛住面试追问。</sub>
+<sub>一个面向大模型实习、AI 求职和 Codex Skill 工作流的 evidence-bound resume toolkit：不只是把简历写好听，而是让每一行都能扛住面试追问。</sub>
+
+<sub>Keywords: LLM internship resume, 大模型实习简历, Codex Skill, resume polish, JD tailoring, interview prep, RAG, Agent, post-training, pretraining, search ranking, AIGC, multimodal.</sub>
 
 <br>
 <br>
@@ -15,8 +17,9 @@
 ![Method](https://img.shields.io/badge/method-evidence--bound-f59e0b)
 ![Language](https://img.shields.io/badge/language-ZH%20%2B%20EN-10b981)
 ![Status](https://img.shields.io/badge/status-final%20MVP-ec4899)
+![GitHub Repo stars](https://img.shields.io/github/stars/couragec/llm-intern-skill?style=flat&label=stars)
 
-[30 秒看懂](#30-秒看懂) · [快速开始](#快速开始) · [Seed 示例](#旗舰示例豆包-seed-搜索排序) · [功能地图](#功能地图) · [参考](#参考)
+[30 秒看懂](#30-秒看懂) · [快速开始](#快速开始) · [Seed 示例](#旗舰示例豆包-seed-搜索排序) · [功能地图](#功能地图) · [Star History](#star-history) · [参考](#参考)
 
 </div>
 
@@ -354,6 +357,12 @@ templates/resume-latex/bill-ryan-elegant-zh_CN/
 - 编译方式：XeLaTeX
 - 保留 upstream attribution 和 license
 - 大号 CJK 字体本地保留但不进 Git
+
+---
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=couragec/llm-intern-skill&type=Date)](https://www.star-history.com/#couragec/llm-intern-skill&Date)
 
 ---
 
