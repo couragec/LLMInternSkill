@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://couragec.github.io/LLMInternSkill/sitemap.xml

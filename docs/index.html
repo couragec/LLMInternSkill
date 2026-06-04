@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LLMInternSkill - 大模型实习简历与求职工具箱</title>
+    <meta name="description" content="LLMInternSkill is an evidence-bound resume and job-search toolkit for LLM internship candidates. It supports resume polish, JD tailoring, interview prep, RAG, Agent, post-training, pretraining, AIGC, multimodal, and search ranking roles.">
+    <meta name="keywords" content="LLMInternSkill, LLM Intern Skill, 大模型实习简历, LLM internship resume, resume polish, JD tailoring, Codex Skill, RAG, Agent, post-training, pretraining, search ranking, AI career">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://couragec.github.io/LLMInternSkill/">
+    <link rel="sitemap" type="application/xml" href="https://couragec.github.io/LLMInternSkill/sitemap.xml">
+    <meta property="og:title" content="LLMInternSkill">
+    <meta property="og:description" content="大模型实习简历与求职工具箱：resume polish, JD tailoring, evidence checks, interview prep, and project upgrade planning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://couragec.github.io/LLMInternSkill/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="LLMInternSkill">
+    <meta name="twitter:description" content="Evidence-bound LLM internship resume and job-search toolkit.">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "LLMInternSkill",
+        "alternateName": "LLM Intern Skill",
+        "description": "Evidence-bound resume and job-search toolkit for LLM internship candidates.",
+        "codeRepository": "https://github.com/couragec/LLMInternSkill",
+        "url": "https://couragec.github.io/LLMInternSkill/",
+        "programmingLanguage": "Markdown",
+        "license": "https://github.com/couragec/LLMInternSkill/blob/main/LICENSE",
+        "author": {
+          "@type": "Person",
+          "name": "couragec",
+          "url": "https://github.com/couragec"
+        },
+        "keywords": [
+          "LLMInternSkill",
+          "LLM internship resume",
+          "大模型实习简历",
+          "resume polish",
+          "JD tailoring",
+          "Codex Skill",
+          "RAG",
+          "Agent",
+          "post-training",
+          "search ranking"
+        ]
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #111827;
+        --muted: #4b5563;
+        --line: #d7dee8;
+        --surface: #f7f9fc;
+        --accent: #0f766e;
+        --accent-strong: #0b5f59;
+        --paper: #ffffff;
+        --code: #1f2937;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--surface);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      a {
+        color: var(--accent-strong);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .page {
+        min-height: 100vh;
+      }
+
+      .hero {
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .wrap {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        gap: 48px;
+        align-items: center;
+        min-height: 78vh;
+        padding: 64px 0 56px;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--accent-strong);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.7rem, 7vw, 5.7rem);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .summary {
+        max-width: 700px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: clamp(1.02rem, 2vw, 1.24rem);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border: 1px solid var(--ink);
+        background: var(--ink);
+        color: var(--paper);
+        font-weight: 800;
+      }
+
+      .button.secondary {
+        background: var(--paper);
+        color: var(--ink);
+      }
+
+      .preview {
+        border: 1px solid var(--line);
+        background: #fbfcfe;
+        box-shadow: 0 22px 60px rgba(17, 24, 39, 0.12);
+      }
+
+      .preview-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 44px;
+        padding: 0 16px;
+        border-bottom: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .dots {
+        display: flex;
+        gap: 6px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ef4444;
+      }
+
+      .dot:nth-child(2) {
+        background: #f59e0b;
+      }
+
+      .dot:nth-child(3) {
+        background: #10b981;
+      }
+
+      .preview-body {
+        display: grid;
+        gap: 14px;
+        padding: 18px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 112px 1fr;
+        gap: 12px;
+        align-items: start;
+        padding: 14px;
+        border: 1px solid var(--line);
+        background: var(--paper);
+      }
+
+      .tag {
+        color: var(--accent-strong);
+        font-size: 0.78rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .row p {
+        margin: 0;
+        color: var(--code);
+        font-size: 0.95rem;
+      }
+
+      .band {
+        padding: 44px 0 58px;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .feature {
+        border: 1px solid var(--line);
+        background: var(--paper);
+        padding: 20px;
+      }
+
+      .feature h2 {
+        margin: 0 0 10px;
+        font-size: 1rem;
+        letter-spacing: 0;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .footer {
+        border-top: 1px solid var(--line);
+        background: var(--paper);
+        padding: 22px 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 820px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+          min-height: auto;
+          padding: 44px 0 36px;
+        }
+
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .row {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="eyebrow">Codex Skill for LLM internship candidates</p>
+            <h1>LLMInternSkill</h1>
+            <p class="summary">
+              大模型实习简历与求职工具箱。把原始经历、目标 JD、项目材料和证据边界整理成可投递、可追问、不过度包装的 LLM internship resume workflow。
+            </p>
+            <div class="actions">
+              <a class="button" href="https://github.com/couragec/LLMInternSkill">GitHub Repository</a>
+              <a class="button secondary" href="https://github.com/couragec/LLMInternSkill#快速开始">Quick Start</a>
+            </div>
+          </div>
+          <div class="preview" aria-label="LLMInternSkill workflow preview">
+            <div class="preview-head">
+              <span>evidence-bound resume workflow</span>
+              <span class="dots" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
+            </div>
+            <div class="preview-body">
+              <div class="row">
+                <span class="tag">Input</span>
+                <p>raw resume + materials folder + target job description</p>
+              </div>
+              <div class="row">
+                <span class="tag">Audit</span>
+                <p>claim extraction, JD fit, truth boundary, evidence contract</p>
+              </div>
+              <div class="row">
+                <span class="tag">Output</span>
+                <p>resume polish, targeted resume, interview grilling, answer cards, upgrade plan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap feature-grid">
+          <article class="feature">
+            <h2>Resume Polish</h2>
+            <p>Strengthens LLM, RAG, Agent, post-training, pretraining, AIGC, multimodal, and search ranking project wording without fabricating experience.</p>
+          </article>
+          <article class="feature">
+            <h2>JD Tailoring</h2>
+            <p>Maps a target internship JD to resume evidence, highlights gaps, and produces conservative fit decisions for high-bar AI roles.</p>
+          </article>
+          <article class="feature">
+            <h2>Interview Prep</h2>
+            <p>Generates interviewer-style follow-up questions, risk notes, answer cards, and evidence upgrade plans for weak or thin projects.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        LLMInternSkill is maintained by <a href="https://github.com/couragec">couragec</a>. Source code: <a href="https://github.com/couragec/LLMInternSkill">github.com/couragec/LLMInternSkill</a>.
+      </div>
+    </footer>
+  </body>
+</html>
