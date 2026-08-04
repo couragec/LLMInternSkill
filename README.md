@@ -2,6 +2,8 @@
 
 # LLMInternSkill / LLM Intern Skill
 
+[English](README_EN.md) | **简体中文**
+
 **大模型实习简历与求职工具箱：LLM internship resume polish, JD tailoring, RAG / Agent / Post-training 项目包装、面试拷打、开源项目补强。**
 
 <sub>一个面向大模型实习、AI 求职和 Codex Skill 工作流的 evidence-bound resume toolkit：不只是把简历写好听，而是让每一行都能扛住面试追问。</sub>
